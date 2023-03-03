@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>테스트</title>
+</head>
+<body>
+    <form th:method="PUT" th:action="@{/locale-change}">
+        <select name="locale">
+            <option value="KO">한국어</option>
+            <option value="EN">영어</option>
+            <option value="JA">일본어</option>
+            <option value="ZH">중국어</option>
+            <option value="other">기타</option>
+        </select>
+
+        <button type="submit">수정</button>
+    </form>
+
+    <table>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.productSeq}"></td>
+            <td th:text="${product.productPropertySeq}"></td>
+            <td th:text="${product.productType}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productDesc}"></td>
+        </tr>
+    </table>
+</body>
+</html>
