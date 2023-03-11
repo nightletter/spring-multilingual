@@ -24,3 +24,4 @@ public class WebConfigurer implements WebMvcConfigurer {
         return resolver;
     }
 }
+

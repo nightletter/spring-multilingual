@@ -12,3 +12,4 @@ public interface ProductPropertyRepository extends JpaRepository<ProductProperty
     @Query("select pp from ProductProperty pp inner join fetch pp.product where pp.language =:userLocale")
     List<ProductProperty> findAll(@Param("userLocale") String userLocale);
 }
+

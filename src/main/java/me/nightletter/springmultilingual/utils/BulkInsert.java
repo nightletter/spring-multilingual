@@ -24,10 +24,10 @@ public class BulkInsert {
         Product savedProduct = productRepository.save(new Product(COFFEE));
 
         productPropertyRepository.saveAll(
-                Arrays.asList(new ProductProperty(savedProduct, "KO", "바닐라라떼", "라떼"),
-                        new ProductProperty(savedProduct, "EN", "Vanilla Latte", "Latte"),
-                        new ProductProperty(savedProduct, "JA", "バニララテ", "ラテ"),
-                        new ProductProperty(savedProduct, "ZH", "香草拿铁", "拿铁"))
+                Arrays.asList(new ProductProperty(savedProduct, "ko", "바닐라라떼", "라떼"),
+                        new ProductProperty(savedProduct, "en", "Vanilla Latte", "Latte"),
+                        new ProductProperty(savedProduct, "ja", "バニララテ", "ラテ"),
+                        new ProductProperty(savedProduct, "zh", "香草拿铁", "拿铁"))
         );
     }
 }
