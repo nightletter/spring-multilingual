@@ -33,9 +33,7 @@ public class TestController {
     }
 
     @GetMapping
-    public String index(HttpServletRequest httpServletRequest,
-                        Model model) {
-
+    public String index(Model model, HttpServletRequest httpServletRequest) {
         model.addAttribute("products", productService.findAll(httpServletRequest));
         return "index";
     }
